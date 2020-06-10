@@ -17,7 +17,8 @@ public class myAppTester {
 	  reverseMethod(n);
 	  System.out.println();
 
-	  // add a line below to call your myTestMethod from here  then remove the block comment symbols  
+	  // add a line below to call your myTestMethod from here  then remove the block comment symbols 
+	  myTestMethod(Integer.toString(n));
 
 	}
 	
@@ -34,14 +35,18 @@ public class myAppTester {
 	   }
 
 
-	   /* 
-	       add your test method in this space then remove the block comment symbols
-	       public static void myTestMethod(...){
-
+	       public static void myTestMethod(String str){
+				if (str.length() == 0)	// Reached the end of the string
+				{
+					return;
+				}
+				else
+				{
+					System.out.print(str.charAt(str.length()-1));
+					strReverse(str.substring(0, str.length()-1));
+				}
             
 
 		   }
-	 
-	   */
 
 }
